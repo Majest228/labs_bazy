@@ -1,0 +1,125 @@
+Table exposition_halls {
+  id int [pk, increment]
+  owner int
+  name varchar
+  area int
+  address varchar
+  tel varchar
+}
+
+Table owners {
+  id int [pk, increment]
+  type int
+  name varchar
+  address varchar
+  tel varchar
+}
+
+Table owner_types {
+  id int [pk, increment]
+  name varchar
+}
+
+Ref: owners.type > owner_types.id
+Ref: exposition_halls.owner > owners.id
+
+Table expositions {
+  id int [pk, increment]
+  hall int
+  type int
+  start_date datetime
+  end_date datetime
+}
+
+Ref: expositions.hall > exposition_halls.id
+
+Table exposition_types {
+  id int [pk, increment]
+  name varchar
+}
+
+Ref: expositions.type > exposition_types.id
+
+Table members {
+  id int [pk, increment]
+  name varchar
+  education int
+  city int
+  born_date date
+  summary text
+}
+
+Table cities {
+  id int [pk, increment]
+  name varchar
+}
+
+Ref: members.city > cities.id
+
+Table educations {
+  id int [pk, increment]
+  education_type id
+  place varchar
+}
+
+Table education_types {
+  id int [pk, increment]
+  name varchar
+}
+
+Ref: educations.education_type > education_types.id
+Ref: members.education > educations.id
+
+Table expositions_members {
+  id int [pk, increment]
+  exposition int
+  member int
+}
+
+Ref: expositions_members.exposition > expositions.id
+Ref: expositions_members.member > members.id
+
+Table works {
+  id int [pk, increment]
+  name varchar
+  type int
+  create_date date
+}
+
+Table work_types {
+  id int [pk, increment]
+  name varchar
+}
+
+Ref: works.type > work_types.id
+
+Table attributes {
+  id int [pk, increment]
+  type int
+  value varchar
+}
+
+Table attribute_types {
+  id int [pk, increment]
+  name varchar
+}
+
+Ref: attributes.type > attribute_types.id
+
+Table works_attributes {
+  id int [pk, increment]
+  work int
+  attribute int
+}
+
+Ref: works_attributes.work > works.id
+Ref: works_attributes.attribute > attributes.id
+
+Table members_works {
+  id int [pk, increment]
+  member int
+  work int
+}
+
+Ref: members_works.member > members.id
+Ref: members_works.work > works.id
