@@ -1,0 +1,8 @@
+.container-fluid .row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card .card-header {
+    background: var(--primary-color);
+}
