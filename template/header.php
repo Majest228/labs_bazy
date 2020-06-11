@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['token'])) {
+        $_SESSION['token'] = uniqid();
+    }
+
+    spl_autoload_register(function ($class_name) {
+        include_once 'classes/'. $class_name . '.php';
+    });
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -14,5 +24,12 @@
         <div class="header__brand">
             <h1 class="header__title">Выставочные залы</h1>
         </div>
+        <nav class="header__nav">
+            <a href="members-list.php" class="header__link">Проводимые выставки</a>
+            <a href="members.php" class="header__link">Участники</a>
+            <a href="owners-list.php" class="header__link">Владельцы</a>
+            <a href="halls-list.php" class="header__link">Выставочные залы</a>
+            <a href="/" class="header__link">Главная</a>
+        </nav>
     </header>
     <main class="content">

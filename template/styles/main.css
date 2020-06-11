@@ -45,9 +45,8 @@ h6 {
     height: 60px;
     padding: 0 16px;
     column-gap: 16px;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     background: var(--darken-color);
     color: #ffffff;
@@ -60,6 +59,24 @@ h6 {
     font-size: 2.25em;
 }
 
+.header__nav {
+    height: 100%;
+    margin-right: -16px;
+    display: flex;
+}
+
+.header__link {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.header__link:hover {
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
 /* Footer */
 
 .footer {
@@ -70,7 +87,7 @@ h6 {
     color: #ffffff;
 }
 
-.footer__links {
+.footer__links .header__link{
     column-gap: 16px;
     display: grid;
     grid-auto-flow: column;
@@ -105,25 +122,4 @@ h6 {
                 0 2px 2px 0 var(--shadow),
                 0 4px 4px 0 var(--shadow),
                 0 8px 8px 0 var(--shadow);
-}
-
-/* Table */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-tbody tr:nth-child(odd) {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-th,
-td {
-    padding: 4px 8px;
-}
-
-td:not(:last-child),
-th:not(:last-child) {
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
 }

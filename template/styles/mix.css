@@ -6,3 +6,9 @@
 .card .card-header {
     background: var(--primary-color);
 }
+
+.btn-icon {
+    max-width: 20px;
+    max-height: 20px;
+    display: block;
+}

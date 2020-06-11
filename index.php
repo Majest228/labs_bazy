@@ -1,22 +1,47 @@
-<?php
-    spl_autoload_register(function ($class_name) {
-        include_once 'classes/'. $class_name . '.php';
-    });
-?>
-
 <?php require_once 'template/header.php'; ?>
 <?php
     $cities = Cities::getAll();
     $work_types = WorkTypes::getAll();
-    $members = Members::getAll();
     $works = Works::getAll();
+    $expositions = Expositions::getAll();
+
 ?>
 <div class="container-fluid">
     <div class="row">
-        <div class="col">
+        <div class="col-6">
             <div class="card block">
                 <div class="card-header">
+                    <h5 class="mb-0">Экспонаты</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th>Название</th>
+                                <th>Год создания</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($works as $key => $work) {
+                                print("
+                                    <tr>
+                                        <td>{$work['name']}</td>
+                                        <td>{$work['create_date']}</td>
+                                    </tr>
+                                ");
+                            } ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card block">
+                <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="mb-0">Города</h5>
+                    <a href="add-city.php" aria-label="Добавить город">
+                        <img class="btn-icon" src="images/plus.svg" alt="" aria-hidden="true">
+                    </a>
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
@@ -27,10 +52,13 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-3">
             <div class="card block">
-                <div class="card-header">
+                <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="mb-0">Типы работ</h5>
+                    <a href="add-typeWork.php" aria-label="Добавить тип работы">
+                        <img class="btn-icon" src="images/plus.svg" alt="" aria-hidden="true">
+                    </a>
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
@@ -42,110 +70,42 @@
             </div>
         </div>
     </div>
+
     <div class="row">
-        <div class="col">
+        <div class="col-10">
             <div class="card block">
                 <div class="card-header">
-                    <h5 class="mb-0">Участники</h5>
+                    <h5 class="mb-0">Выставки которые вы успеете посетить</h5>
                 </div>
                 <div class="card-body">
-                    <table>
+                    <table class="table table-bordered table-striped mb-0">
                         <thead>
-                            <tr>
-                                <th>Имя</th>
-                                <th>Образование</th>
-                                <th>Город</th>
-                                <th>Дата рождения</th>
-                            </tr>
+                        <tr>
+                            <th>Дата начала</th>
+                            <th>Дата конца</th>
+                            <th>Тип выставки</th>
+                            <th>Место проведения</th>
+                            <th>Адрес</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($members as $key => $member) {
-                                print("
+                        <?php foreach ($expositions as $key => $exposition) {
+                            print("
                                     <tr>
-                                        <td>{$member['name']}</td>
-                                        <td>{$member['education']}</td>
-                                        <td>{$member['city']}</td>
-                                        <td>{$member['born_date']}</td>
+                                        <td>{$exposition['startDate']}</td>
+                                        <td>{$exposition['endDate']}</td>
+                                        <td>{$exposition['typeName']}</td>
+                                        <td>{$exposition['hallName']}</td>
+                                        <td>{$exposition['address']}</td>                                   
                                     </tr>
                                 ");
-                            } ?>
+                        } ?>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-        <div class="card block">
-            <div class="card-header">
-                <h5 class="mb-0">Экспонаты</h5>
-            </div>
-            <div class="card-body">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Название</th>
-                        <th>Год создания</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach ($works as $key => $work) {
-                        print("
-                                    <tr>
-                                        <td>{$work['name']}</td>
-                                        <td>{$work['create_date']}</td>
-                                    </tr>
-                                ");
-                    } ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!--<div id="cities">-->
-<!--    <div class="card">-->
-<!--        <div class="card-header" id="citiesHeading">-->
-<!--            <h5 class="mb-0">-->
-<!--                <button class="btn btn-link" data-toggle="collapse" data-target="#citiesBody" aria-expanded="true" aria-controls="collapseOne">-->
-<!--                    Города-->
-<!--                </button>-->
-<!--            </h5>-->
-<!--        </div>-->
-<!---->
-<!--        <div id="citiesBody" class="collapse" aria-labelledby="citiesHeading" data-parent="#cities">-->
-<!--            <div class="card-body">-->
-<!--                <ul class="list-group">-->
-<!--                    --><?php //foreach ($cities as $key => $entry) {
-//                        print("<li class='list-group-item'>{$entry['name']}</li>");
-//                    } ?>
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!---->
-<!--<div id="workTypes">-->
-<!--    <div class="card">-->
-<!--        <div class="card-header" id="workTypesHeading">-->
-<!--            <h5 class="mb-0">-->
-<!--                <button class="btn btn-link" data-toggle="collapse" data-target="#workTypesBody" aria-expanded="true" aria-controls="collapseOne">-->
-<!--                    Типы работ-->
-<!--                </button>-->
-<!--            </h5>-->
-<!--        </div>-->
-<!---->
-<!--        <div id="workTypesBody" class="collapse" aria-labelledby="citiesHeading" data-parent="#workTypes">-->
-<!--            <div class="card-body">-->
-<!--                <ul class="list-group">-->
-<!--                    --><?php //foreach ($work_types as $key => $entry) {
-//                        print("<li class='list-group-item'>{$entry['name']}</li>");
-//                    } ?>
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+
+</div>
 <?php require_once 'template/footer.php'; ?>
