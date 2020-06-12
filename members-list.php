@@ -1,6 +1,6 @@
 <?php require_once 'template/header.php'; ?>
 <?php
-$labours = Members::getSQL();
+    $labours = Members::getSQL();
 
 ?>
     <div class="container-fluid">
@@ -9,6 +9,7 @@ $labours = Members::getSQL();
             <div class="card block">
                 <div class="card-header">
                     <h5 class="mb-0">Проводимые выставки</h5>
+
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-striped mb-0">
@@ -28,18 +29,18 @@ $labours = Members::getSQL();
                         <tbody>
                         <?php foreach ($labours as $key => $member) {
                             print("
-                                    <tr>
-                                        <td>{$member['nameHalls']}</td>
-                                        <td>{$member['type']}</td>
-                                        <td>{$member['dateStart']}</td>
-                                        <td>{$member['dateEnd']}</td>
-                                        <td>{$member['nameWork']}</td>
-                                        <td>{$member['workType']}</td>
-                                        <td>{$member['FIO']}</td>
-                                        <td>{$member['born_date']}</td>
-                                        <td>{$member['create_date']}</td>
-                                    </tr>
-                                ");
+                                <tr>
+                                    <td>{$member['nameHalls']}</td>
+                                    <td>{$member['type']}</td>
+                                    <td>{$member['dateStart']}</td>
+                                    <td>{$member['dateEnd']}</td>
+                                    <td>{$member['nameWork']}</td>
+                                    <td>{$member['workType']}</td>
+                                    <td>{$member['FIO']}</td>
+                                    <td>{$member['born_date']}</td>
+                                    <td>{$member['create_date']}</td>
+                                </tr>
+                            ");
                         } ?>
                         </tbody>
                     </table>

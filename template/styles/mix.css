@@ -12,3 +12,8 @@
     max-height: 20px;
     display: block;
 }
+
+table thead th,
+table thead td {
+    vertical-align: middle !important;
+}

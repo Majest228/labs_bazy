@@ -123,3 +123,7 @@ h6 {
                 0 4px 4px 0 var(--shadow),
                 0 8px 8px 0 var(--shadow);
 }
+
+.container-fluid {
+
+}
