@@ -1,13 +1,11 @@
 <?php
 
 class OwnerTypes extends Table {
-
     public $id = 0;
     public $name = '';
 
-    public function validate()
-    {
-        return false;
+    public function validate() {
+        return !empty($this->name);
     }
 
     public static function getAll() {
@@ -15,6 +13,4 @@ class OwnerTypes extends Table {
 
         return $db->query("SELECT * FROM `owner_types`")->fetchAll(PDO::FETCH_ASSOC);
     }
-
-
 }

@@ -1,26 +1,20 @@
 <?php
 
 class ExpositionHalls {
-
-    public $id = 0;
-    public $owner = 0;
-    public $name = '';
-    public $area = 0;
-    public $address = '';
-    public $tel = '';
-
-    public function validate()
-    {
-        return false;
-    }
-
     public static function getAll() {
         $db = Database::getDB();
 
         return $db->query("
-            SELECT expositions.start_date as startDate, expositions.end_date as endDate, exposition_halls.name as hallName, exposition_halls.address as address, exposition_halls.area as area, owners.name as ownerName FROM `exposition_halls`
-             JOIN owners ON exposition_halls.id = owners.id
-             JOIN expositions ON exposition_halls.id = expositions.id
+            SELECT
+                DATE_FORMAT(expositions.start_date, '%d.%m.%y %H:%i') AS startDate,
+                DATE_FORMAT(expositions.end_date, '%d.%m.%y %H:%i') AS endDate,
+                exposition_halls.name AS hallName,
+                exposition_halls.address AS address,
+                exposition_halls.area AS area,
+                owners.name AS ownerName
+            FROM `exposition_halls`
+            JOIN owners ON exposition_halls.id = owners.id
+            JOIN expositions ON exposition_halls.id = expositions.id
         ")->fetchAll(PDO::FETCH_ASSOC);
     }
 }

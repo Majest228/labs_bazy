@@ -1,16 +1,6 @@
 <?php
 
-
-class WorkTypes extends Table {
-
-    public $id = 0;
-    public $name = '';
-
-    public function validate()
-    {
-        return false;
-    }
-
+class WorkTypes {
     public static function getAll() {
         $db = Database::getDB();
 

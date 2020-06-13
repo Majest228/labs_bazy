@@ -1,7 +1,6 @@
 <?php
 
 class Owner extends Table {
-
     public $id = 0;
     public $type = 0;
     public $name = '';

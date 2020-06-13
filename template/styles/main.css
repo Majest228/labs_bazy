@@ -1,7 +1,6 @@
 :root {
     --darken-color: #084C61;
     --primary-color: #E3B505;
-    --secondary-color: #DB504A;
 }
 
 /* Reset */
@@ -65,16 +64,26 @@ h6 {
     display: flex;
 }
 
+.header__item {
+    display: flex;
+}
+
+.header__item--current {
+    font-weight: 500;
+    background: var(--primary-color);
+    color: var(--darken-color);
+}
+
 .header__link {
     padding: 0 16px;
     display: flex;
     align-items: center;
-    color: #ffffff;
+    color: inherit;
 }
 
 .header__link:hover {
     background: rgba(0, 0, 0, 0.2);
-    color: #ffffff;
+    color: inherit;
 }
 
 /* Footer */
@@ -122,8 +131,4 @@ h6 {
                 0 2px 2px 0 var(--shadow),
                 0 4px 4px 0 var(--shadow),
                 0 8px 8px 0 var(--shadow);
-}
-
-.container-fluid {
-
 }

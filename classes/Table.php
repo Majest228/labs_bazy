@@ -1,8 +1,5 @@
 <?php
 
-
-abstract class Table
-{
+abstract class Table {
     abstract public function validate();
-
 }

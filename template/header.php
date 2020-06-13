@@ -7,6 +7,19 @@
     spl_autoload_register(function ($class_name) {
         include_once 'classes/'. $class_name . '.php';
     });
+
+    function createLink($href, $text) {
+        $is_active = $_SERVER['REQUEST_URI'] == $href;
+        $class_name = $is_active
+            ? 'header__item header__item--current'
+            : 'header__item';
+
+        print("
+            <div class='$class_name'>
+                <a href='$href' class='header__link'>$text</a>
+            </div>
+        ");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -25,11 +38,13 @@
             <h1 class="header__title">Выставочные залы</h1>
         </div>
         <nav class="header__nav">
-            <a href="members-list.php" class="header__link">Проводимые выставки</a>
-            <a href="members.php" class="header__link">Участники</a>
-            <a href="owners-list.php" class="header__link">Владельцы</a>
-            <a href="halls-list.php" class="header__link">Выставочные залы</a>
-            <a href="/" class="header__link">Главная</a>
+            <?php
+                createLink("/members-list.php", "Проводимые выставки");
+                createLink("/members.php", "Участники");
+                createLink("/owners-list.php", "Владельцы");
+                createLink("/halls-list.php", "Выставочные залы");
+                createLink("/", "Главная");
+            ?>
         </nav>
     </header>
     <main class="content">
