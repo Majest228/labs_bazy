@@ -1,20 +1,20 @@
 <?php
 
-class Cities {
+class Category {
     public static function getAll() {
         $db = Database::getDB();
 
-        return $db->query("SELECT * FROM `cities`")->fetchAll(PDO::FETCH_ASSOC);
+        return $db->query("SELECT * FROM `category`")->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public static function add(City $city) {
         $db = Database::getDB();
 
         $statement = $db->prepare("
-            INSERT INTO cities (name)
+            INSERT INTO category (name)
             VALUES (:name)
         ");
-        $statement->bindParam(":name", $city->name);
+        $statement->bindParam(":name", $categorys->name);
 
         return $statement->execute();
     }

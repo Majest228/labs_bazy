@@ -8,9 +8,10 @@
 }
 
 .btn-icon {
-    max-width: 20px;
+    max-width: 100px;
     max-height: 20px;
     display: block;
+    color:red
 }
 
 table thead th,
