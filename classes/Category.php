@@ -1,21 +1,20 @@
 <?php
 
-class Category {
-    public static function getAll() {
-        $db = Database::getDB();
+class Items extends Table {
+    public $id = 0;
+    public $name = '';
+    public $education = 0;
+    public $city = 0;
+    public $born_date = null;
+    public $summary = '';
 
-        return $db->query("SELECT * FROM `category`")->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    public static function add(City $city) {
-        $db = Database::getDB();
-
-        $statement = $db->prepare("
-            INSERT INTO category (name)
-            VALUES (:name)
-        ");
-        $statement->bindParam(":name", $categorys->name);
-
-        return $statement->execute();
+    public function validate() {
+        return (
+            !empty($this->name) &&
+            !empty($this->education) &&
+            !empty($this->city) &&
+            !empty($this->born_date) &&
+            !empty($this->summary)
+        );
     }
 }

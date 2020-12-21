@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1348791c-c2e6-4d56-95e4-9ee59a7abfe8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/add-categories.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/add-manufactured.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/Categories.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/Item.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/Items.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/Manufactured.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/Manufacturied.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/Products.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members-categories.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members-manufactured.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members-products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/404.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add-city.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add-members.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add-owner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add-typeWork.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add-work.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Cities.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/City.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Education.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/EducationTypes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Educations.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/ExpositionHalls.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Expositions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Member.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Members.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Owner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/OwnerTypes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Owners.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Work.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/WorkType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/WorkTypes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Works.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/halls-list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hedgehog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members-list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/owners-list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/painters.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scheme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scheme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/styles/mix.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/styles/mix.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lxP4BJqbC1hEtMMoi7WgHFZ4zx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1348791c-c2e6-4d56-95e4-9ee59a7abfe8" name="Default Changelist" comment="" />
+      <created>1608535575500</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608535575500</updated>
+      <workItem from="1608535576700" duration="4856000" />
+      <workItem from="1608564574308" duration="2127000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

@@ -39,10 +39,10 @@
         </div>
         <nav class="header__nav">
             <?php
-                createLink("./members-list.php", "Продукты");
-                createLink("./members.php", "Товары");
-                createLink("./owners-list.php", "Склад");
-                createLink("./halls-list.php", "Фирмы");
+                createLink("./members-manufactured.php", "Фирмы");
+                createLink("./members-categories.php", "Категории");
+                createLink("./members-items.php", "Айтемы");
+                createLink("./members-products.php", "Товары");
                 createLink("./halls-list.php", "Категории");
                 createLink("./", "Главная");
             ?>
